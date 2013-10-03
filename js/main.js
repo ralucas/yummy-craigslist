@@ -57,8 +57,8 @@ $(function () {
 
                 // Show table after it has been populated and functionality is bound
                 // move container up
-                $('.container').css('padding-top', '20px');
-                $(".tabbable").fadeIn('slow');
+                //$('.container').css('padding-top', '20px');
+                //$(".tabbable").fadeIn('slow');
                 
                 $('#myTab a:last').tab('show');
             }

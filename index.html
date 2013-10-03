@@ -4,27 +4,19 @@
     <title>wunder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet" media="screen">
-    <style>
-      .container {
-        padding-top: 100px;
-        width:400px;
-      }
-      .head {
-        text-align: center;
-      }
-      h1 {
-        font-size: 50px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
-  <body>
-    <div class="container">
 
-      <div class="head">
+  <body>
+    <div class="container .col-md4">
+      
+      <div class="head .col-md4">
         <h1>wunder</h1>
         <p>nothing to do with craigslist. promise.</p>
+        <button type="button" class="btn btn-primary btn-default btn-block btn-reset">Reset Form</button>
       </div>  
 
+    <div class=".col-md4" id="searchForm">
       <form role="form">
         <div class="form-group">
           <label>City</label>
@@ -37,14 +29,31 @@
         <br>
         <button type="button" class="btn btn-success btn-lg btn-block">Get Lucky!</button>
       </form>
+    </div>
 
       <br>
       <br>
+        <div class="tab-content .col-md4" id="searchResults">
 
-          <div class="tab-pane active" id="tab1">
+          <ul class="nav nav-tabs nav-justified" id="nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">Results</a></li>
+            <li><a href="#saved" data-toggle="tab">Saved</a></li>
+            <li><a href="#email" data-toggle="tab">Email</a></li>
+          </ul>
+
+          <div class="tab-pane active .col-md4" id="home">
             <table class="table table-striped results"></table>
           </div>
 
+          <div class="tab-pane .col-md4" id="saved">
+            <table class="table table-striped saved"></table>
+          </div>
+
+          <div class="tab-pane .col-md4" id="email">
+            <table class="table table-striped email"></table>
+          </div>
+
+        </div>
     </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>

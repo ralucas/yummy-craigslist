@@ -1,0 +1,21 @@
+.container {
+	padding-top: 2%;
+	width: 33%;
+}
+
+.head {
+	text-align: center;
+} 
+
+h1 {
+	font-size: 50px;
+}
+
+#nav-tabs{
+	display: none;
+	margin-bottom: 20px;
+}
+
+.btn-reset{
+	display:none;
+}

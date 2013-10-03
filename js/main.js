@@ -29,10 +29,12 @@ $(".btn-success").click(function() {
                         data.query.results.RDF.item[i].source + '" target="_blank" class="result">' + 
                         data.query.results.RDF.item[i].title[0] + '</a></td></tr>');
                 };
+                // Show table after it has been populated and functionality is bound
+                // move container up
+                $('.container').css('padding-top', '20px');
+                $(".tabbable").fadeIn('slow');
             }
 
-            // Show table after it has been populated and functionality is bound
-            $(".tabbable").fadeIn('slow');
         }
 
     });

@@ -1,7 +1,7 @@
 $(function () {
 
-    $(".btn-success").click(function() {
-
+    $(".btn-success").click(function(e) {
+        event.preventDefault();
         //creates tabs and selects results by default
         $('#nav-tabs').css('display','block');
 
@@ -64,16 +64,13 @@ $(function () {
         
         
         $(".tab-content").on('click','.btn-save', function(){
-            var savedListing = $(this).find('.result').data();
-            console.log(savedListing);
-            $("#saved").prepend('<tr><td>'+savedListing+'</td></tr>');
-
+            var savedListing = $(this).closest('tr').find('.result').clone();
+            (savedListing).prependTo('#saved');
         });
 
          $(".tab-content").on('click','.btn-email', function(){
-            var emailListing = $(this).find('.result').val();
-            console.log(emailListing);
-            $("#email").prepend('<tr><td>'+emailListing+'</td></tr>');
+            var emailListing = $(this).closest('tr').find('.result').clone();
+            (emailListing).prependTo('#email');
 
         });
      });
